@@ -52,7 +52,7 @@ coefficients = {
           onChange: @handleValueChange
       React.DOM.div
         className: 'form-group'
-        React.DOM.a
+        React.DOM.button
           className: 'btn btn-primary'
           onClick: @toggleUnit
           'Metric =' + @state.ismetric.toString()
