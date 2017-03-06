@@ -41,6 +41,8 @@ coefficients = {
           name: 'date'
           value: @state.date
           onChange: @handleValueChange
+      React.DOM.div
+        className: 'form-group'
         React.DOM.input
           type: 'text'
           className: 'form-control'
@@ -48,10 +50,14 @@ coefficients = {
           name: 'liftname'
           value: @state.liftname
           onChange: @handleValueChange
+      React.DOM.div
+        className: 'form-group'
         React.DOM.a
           className: 'btn btn-primary'
           onClick: @toggleUnit
           'Metric =' + @state.ismetric.toString()
+      React.DOM.div
+        className: 'form-group'
         React.DOM.input
           type: 'nubmer'
           className: 'form-control'
@@ -59,18 +65,20 @@ coefficients = {
           name: 'weightlifted'
           value: @state.weightlifted
           onChange: @handleValueChange
+      React.DOM.div
+        className: 'form-group'
         React.DOM.input
           type: 'nubmer'
           min: 1
           max: 10
           className: 'form-control'
-          placeholder: 'repsperformed'
+          placeholder: 'Repsperformed'
           name: 'repsperformed'
           value: @state.repsperformed
           onChange: @handleValueChange
-        React.DOM.button
-          type: 'submit'
-          className: 'btn btn-primary'
-          disabled: !@valid()
-          'Create Lift' 
-        React.createElement OneRmBox, onerm: @calculateOneRM()
+      React.DOM.button
+        type: 'submit'
+        className: 'btn btn-primary'
+        disabled: !@valid()
+        'Create Lift' 
+      React.createElement OneRmBox, onerm: @calculateOneRM()
